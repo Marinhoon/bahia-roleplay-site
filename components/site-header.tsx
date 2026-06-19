@@ -29,13 +29,12 @@ export function SiteHeader() {
     >
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <a href="#inicio" className="flex items-center gap-2.5">
-          {/* Logo com imagem - caminho corrigido */}
           <Image
             src="/images/logo.png"
             alt={site.name}
             width={180}
             height={48}
-            className="h-20 w-auto object-contain"
+            className="h-14 w-auto object-contain"
             priority
           />
         </a>
@@ -53,14 +52,19 @@ export function SiteHeader() {
         </nav>
 
         <div className="hidden items-center gap-2 lg:flex">
-          <Button variant="ghost" size="sm" asChild>
-            <a href={site.discordUrl} target="_blank" rel="noreferrer">
+          {/* Botão Discord - sem asChild */}
+          <a href={site.discordUrl} target="_blank" rel="noreferrer" className="inline-block">
+            <Button variant="ghost" size="sm">
               Discord
-            </a>
-          </Button>
-          <Button size="sm" asChild>
-            <a href={site.connectUrl}>Entrar no servidor</a>
-          </Button>
+            </Button>
+          </a>
+          
+          {/* Botão Entrar - sem asChild */}
+          <a href={site.connectUrl} className="inline-block">
+            <Button size="sm">
+              Entrar no servidor
+            </Button>
+          </a>
         </div>
 
         <button
@@ -91,14 +95,19 @@ export function SiteHeader() {
               </a>
             ))}
             <div className="mt-2 flex flex-col gap-2">
-              <Button variant="outline" asChild>
-                <a href={site.discordUrl} target="_blank" rel="noreferrer">
+              {/* Discord mobile - sem asChild */}
+              <a href={site.discordUrl} target="_blank" rel="noreferrer" className="inline-block w-full">
+                <Button variant="outline" className="w-full">
                   Discord
-                </a>
-              </Button>
-              <Button asChild>
-                <a href={site.connectUrl}>Entrar no servidor</a>
-              </Button>
+                </Button>
+              </a>
+              
+              {/* Entrar mobile - sem asChild */}
+              <a href={site.connectUrl} className="inline-block w-full">
+                <Button className="w-full">
+                  Entrar no servidor
+                </Button>
+              </a>
             </div>
           </nav>
         </div>
