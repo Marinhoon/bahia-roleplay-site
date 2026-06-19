@@ -1,11 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  typescript: {
-    ignoreBuildErrors: true,
-  },
+  output: 'export',  // ← Isso gera uma pasta 'out' com arquivos estáticos
   images: {
-    unoptimized: true,
+    unoptimized: true,  // Necessário para imagens no export estático
   },
+  trailingSlash: true,  // Opcional - ajuda com rotas
 }
 
-export default nextConfig
+module.exports = nextConfig
