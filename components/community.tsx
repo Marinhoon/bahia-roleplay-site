@@ -27,23 +27,22 @@ export function Community() {
               roleplay da Bahia.
             </p>
             <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
-              <Button asChild size="lg" className="h-12 px-6 text-base">
-                <a href={site.connectUrl}>
-                  <Play className="size-5" aria-hidden="true" />
+              <a href={site.connectUrl} className="inline-block">
+                <Button size="lg" className="h-12 px-6 text-base">
+                  <Play className="size-5 mr-2" aria-hidden="true" />
                   Entrar no servidor
-                </a>
-              </Button>
-              <Button
-                asChild
-                size="lg"
-                variant="outline"
-                className="h-12 border-border bg-background/40 px-6 text-base backdrop-blur"
-              >
-                <a href={site.discordUrl} target="_blank" rel="noreferrer">
-                  <MessageCircle className="size-5" aria-hidden="true" />
+                </Button>
+              </a>
+              <a href={site.discordUrl} target="_blank" rel="noreferrer" className="inline-block">
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="h-12 border-border bg-background/40 px-6 text-base backdrop-blur"
+                >
+                  <MessageCircle className="size-5 mr-2" aria-hidden="true" />
                   Entrar no Discord
-                </a>
-              </Button>
+                </Button>
+              </a>
             </div>
           </div>
         </div>
